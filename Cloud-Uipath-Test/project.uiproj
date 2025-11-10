@@ -1,0 +1,6 @@
+{
+  "Name": "Cloud-Uipath-Test",
+  "ProjectType": "Process",
+  "Description": "Iniciando os estudos de Uipath + AWS",
+  "MainFile": "Main.xaml"
+}
