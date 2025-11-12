@@ -1,0 +1,132 @@
+GUIA OFICIAL DE NOMEAÇÃO UiPath
+================================
+
+📋 REGRAS GERAIS
+----------------
+- Use camelCase: primeiraLetraMinúscula
+- Sempre em INGLÊS
+- Seja descritivo mas conciso
+- Use prefixos de tipo (Hungarian Notation)
+
+🏷️ PREFIXOS POR TIPO DE DADO
+-----------------------------
+String    → str  | strCustomerName, strFileName
+Int32     → i    | iAge, iRetryCount
+Boolean   → b    | bIsEnabled, bFileExists
+DataTable → dt   | dtCustomers, dtResults
+DateTime  → dtt  | dttStartDate, dttExecutionTime
+Array     → arr  | arrEmails, arrFileList
+List      → lst  | lstProducts, lstUsers
+Dictionary→ dict | dictConfig, dictUserSettings
+Double    → dec  | decPrice, decTotalAmount
+
+🎯 ELEMENTOS DE WORKFLOW
+------------------------
+SEQUENCES:
+seqMainProcess, seqLoginToSystem, seqDataExtraction
+
+FLOWCHARTS:
+flcCustomerValidation, flcPaymentProcessing
+
+LOOPS:
+feRowInDataTable (For Each)
+whProcessingRecords (While)
+ifLoginSuccessful (If Conditions)
+
+🖥️ ACTIVITIES ESPECÍFICAS
+--------------------------
+EMAIL:
+smtpSendNotification, imapReadEmails
+
+EXCEL:
+xlsReadRange, xlsWriteData
+
+WEB:
+brwOpenChrome, elmClickButton, txtTypeUsername
+
+FILE:
+filCopyFile, dirCreateFolder
+
+📁 ESTRUTURA DE PROJETOS
+------------------------
+NOMES DE PROJETO:
+ACME-InvoiceProcessing-Automation
+Learning-WebDataExtraction
+Practice-ExcelAutomation
+
+PASTAS:
+Projects/
+├── InvoiceProcessing/
+│   ├── Main.xaml
+│   ├── seqDataExtraction.xaml
+│   └── seqEmailNotification.xaml
+
+💾 VARIÁVEIS DE ARMAZENAMENTO
+------------------------------
+ARQUIVOS:
+strInputFolderPath = "C:\RPA\Input\"
+strOutputFilePath = "C:\RPA\Output\Report.xlsx"
+strLogFileLocation = "C:\RPA\Logs\"
+
+CREDENCIAIS:
+credAdminUser, credEmailAccount, credDatabaseLogin
+
+CONFIGURAÇÕES:
+strSMTPServer = "smtp.company.com"
+iSMTPPort = 587
+bUseSSL = True
+
+🚦 VARIÁVEIS DE CONTROLE
+-------------------------
+CONTADORES:
+iCurrentRow, iTotalRecords, iSuccessCount, iErrorCount
+
+STATUS:
+bProcessCompleted, bErrorOccured, bRestartRequired
+
+TEMPOS:
+dttStartTime, dttEndTime, tsProcessingTime
+
+📊 EXEMPLOS DE PROJETOS REAIS
+------------------------------
+PROJETO EMAIL:
+strSenderEmail, strEmailSubject, strAttachmentName
+bHasAttachment, dtEmailData, iProcessedEmails
+seqConnectToOutlook, seqExtractAttachments
+
+PROJETO WEB SCRAPING:
+strTargetURL, strProductName, decProductPrice
+iStockQuantity, dtScrapedData, bDataFound
+brwNavigateToPage, elmExtractProductInfo
+
+PROJETO PDF:
+strPDFFilePath, strExtractedText, arrDocumentLines
+dtParsedData, bIsPDFReadable
+seqOpenPDFDocument, seqExtractTextContent
+
+✅ CHECKLIST FINAL
+------------------
+[ ] Prefixo de tipo usado (str, i, dt, b)
+[ ] Nome descritivo e em inglês
+[ ] camelCase aplicado corretamente
+[ ] Sem caracteres especiais
+[ ] Consistência em todo projeto
+[ ] Comentários explicativos quando necessário
+
+📝 CONVENÇÕES DE COMENTÁRIOS
+-----------------------------
+// Seção: Nome da Funcionalidade
+// Descrição: O que essa parte faz
+// Autor: SeuNome
+// Data: YYYY-MM-DD
+
+🎯 DICAS RÁPIDAS
+----------------
+1. SEMPRE use inglês - padrão corporativo
+2. Prefixos evitam confusão de tipos
+3. Nomes longos são melhores que curtos ambíguos
+4. Mantenha consistência em todo projeto
+5. Documente variáveis complexas
+
+================================
+PRONTO PARA USO PROFISSIONAL! 🚀

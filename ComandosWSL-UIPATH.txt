@@ -1,0 +1,207 @@
+COMANDOS WSL + VS CODE PARA CONTROLE UiPath
+===========================================
+
+📁 ACESSO A ARQUIVOS UiPath VIA WSL
+------------------------------------
+# Navegar para projetos UiPath
+cd /mnt/c/Users/SEU_USUARIO/Documents/UiPath/
+
+# Listar projetos
+ls -la
+
+# Criar nova pasta para projeto
+mkdir novo-projeto-rpa
+
+🚀 EXECUÇÃO DE ROBÔS VIA LINHA DE COMANDO
+-----------------------------------------
+# Executar workflow .xaml
+/mnt/c/Program\ Files/UiPath/Studio/UiRobot.exe execute --file "/mnt/c/Projects/meu_workflow.xaml"
+
+# Executar com parâmetros
+/mnt/c/Program\ Files/UiPath/Studio/UiRobot.exe execute --file "/path/to/workflow.xaml" --input '{"param1":"value1"}'
+
+# Validar workflow
+/mnt/c/Program\ Files/UiPath/Studio/UiRobot.exe validate --file "Main.xaml"
+
+📦 GESTÃO DE PACOTES
+--------------------
+# Instalar pacote via PowerShell no WSL
+powershell.exe -Command "& {cd 'C:\Projects\meu-projeto-uipath'; nuget install UiPath.Excel.Activities -Version 2.16.0}"
+
+🐚 SCRIPTS SHELL PARA AUTOMAÇÃO
+-------------------------------
+#!/bin/bash
+# deploy-uipath.sh
+
+PROJECT_PATH="/mnt/c/Projects/meu-automation"
+ROBOT_PATH="/mnt/c/Program Files/UiPath/Studio/UiRobot.exe"
+
+echo "📦 Iniciando deploy..."
+cd "$PROJECT_PATH"
+"$ROBOT_EXE" validate --file "Main.xaml"
+"$ROBOT_EXE" execute --file "Main.xaml"
+echo "✅ Concluído!"
+
+🐍 SCRIPTS PYTHON PARA CONTROLE
+-------------------------------
+#!/usr/bin/env python3
+# uipath-controller.py
+
+import subprocess
+import json
+
+class UiPathController:
+    def __init__(self):
+        self.robot_path = "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe"
+
+    def execute_workflow(self, workflow_path, parameters=None):
+        cmd = [self.robot_path, 'execute', '--file', workflow_path]
+        if parameters:
+            cmd.extend(['--input', json.dumps(parameters)])
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        return result.returncode, result.stdout, result.stderr
+
+⚙️ CONFIGURAÇÃO VS CODE - TASKS.JSON
+-------------------------------------
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "UiPath: Executar Workflow",
+            "type": "shell",
+            "command": "wsl",
+            "args": [
+                "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe",
+                "execute",
+                "--file",
+                "${workspaceFolder}/Main.xaml"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "UiPath: Validar Projeto",
+            "type": "shell",
+            "command": "wsl",
+            "args": [
+                "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe",
+                "validate",
+                "--file",
+                "${workspaceFolder}/Main.xaml"
+            ],
+            "group": "build"
+        }
+    ]
+}
+
+🔧 CONFIGURAÇÃO VS CODE - LAUNCH.JSON
+-------------------------------------
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Executar UiPath via WSL",
+            "type": "node",
+            "request": "launch",
+            "program": "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe",
+            "args": ["execute", "--file", "${workspaceFolder}/Main.xaml"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
+
+📊 COMANDOS DE MONITORAMENTO
+----------------------------
+# Verificar processos UiPath
+ps aux | grep -i uirobot
+
+# Monitorar recursos
+top -p $(pgrep -f UiRobot)
+
+# Verificar logs Windows
+powershell.exe "Get-EventLog -LogName Application -Source UiPath -Newest 10"
+
+🗂️ GESTÃO DE ARQUIVOS E BACKUP
+------------------------------
+# Backup de projeto
+tar -czf uipath-backup-$(date +%Y%m%d).tar.gz /mnt/c/Projects/meu-projeto/
+
+# Sincronização entre ambientes
+rsync -av /mnt/c/Projects/meu-projeto/ ./wsl-copy-uipath/
+
+# Encontrar todos os arquivos .xaml
+find /mnt/c/Projects/meu-projeto -name "*.xaml" -type f
+
+🔄 PIPELINE DE AUTOMAÇÃO COMPLETA
+---------------------------------
+#!/bin/bash
+# automation-pipeline.sh
+
+set -e
+echo "🔨 Pipeline UiPath + WSL + VS Code"
+
+# Validar todos os workflows
+find /mnt/c/Projects/$1 -name "*.xaml" -exec \
+    "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe" validate --file {} \;
+
+# Executar testes
+for workflow in $(find /mnt/c/Projects/$1 -name "*Test*.xaml"); do
+    echo "Executando: $workflow"
+    "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe" execute --file "$workflow"
+done
+
+# Gerar documentação
+tree /mnt/c/Projects/$1 -I 'node_modules|bin|obj' > documentation.txt
+
+🚀 ALIASES RÁPIDOS (.bashrc ou .zshrc)
+---------------------------------------
+# Aliases para UiPath
+alias uipath-run='f() { "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe" execute --file "$1"; }; f'
+alias uipath-validate='f() { "/mnt/c/Program Files/UiPath/Studio/UiRobot.exe" validate --file "$1"; }; f'
+alias uipath-projects='cd /mnt/c/Users/$USER/Documents/UiPath/ && ls -la'
+
+# Função criar projeto
+uipath-new() {
+    mkdir -p "/mnt/c/Projects/$1"
+    cp -r "/mnt/c/Program Files/UiPath/Studio/Templates/Process/" "/mnt/c/Projects/$1/"
+    echo "✅ Projeto $1 criado"
+}
+
+📝 EXEMPLOS DE USO PRÁTICO
+--------------------------
+# 1. Executar workflow específico
+uipath-run "/mnt/c/Projects/InvoiceProcessing/Main.xaml"
+
+# 2. Validar projeto completo
+find /mnt/c/Projects/meu-projeto -name "*.xaml" -exec uipath-validate {} \;
+
+# 3. Pipeline completa via VS Code
+#    - Pressione Ctrl+Shift+P
+#    - Digite "Tasks: Run Task"
+#    - Selecione "UiPath: Executar Workflow"
+
+🔍 SOLUÇÃO DE PROBLEMAS COMUNS
+------------------------------
+# Problema: Permissão negada
+chmod +x /mnt/c/Program\ Files/UiPath/Studio/UiRobot.exe
+
+# Problema: Caminho não encontrado
+ls -la "/mnt/c/Program Files/UiPath/Studio/"
+
+# Problema: Encoding de arquivos
+find . -name "*.xaml" -exec file {} \;
+
+# Verificar versão UiPath
+/mnt/c/Program\ Files/UiPath/Studio/UiRobot.exe --version
+
+🎯 FLUXO DE TRABALHO RECOMENDADO
+--------------------------------
+1. Desenvolver no UiPath Studio
+2. Versionar no Git via WSL
+3. Validar via linha de comando
+4. Executar testes via VS Code Tasks
+5. Monitorar via comandos WSL
+6. Fazer backup automático
+
+================================
+INTEGRAÇÃO COMPLETA WSL + UiPath 🚀
