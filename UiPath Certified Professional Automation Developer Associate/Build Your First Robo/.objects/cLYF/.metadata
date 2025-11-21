@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Page Expired",
+  "Type": "App",
+  "Id": "cLYFIpm41Eu8GVYZgjrLtA",
+  "Reference": "mhU9lgpNbE2PpEDAEPL1jA/cLYFIpm41Eu8GVYZgjrLtA",
+  "Created": "2025-11-13T20:30:35.5197549Z",
+  "Updated": "2025-11-13T20:30:35.5197549Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

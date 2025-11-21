@@ -1,0 +1,278 @@
+# 🎯 GUIA COMPLETO: Tipos de Dados, Variáveis e Estruturas no UiPath 📊
+# ==============================================================
+
+## 📋 ÍNDICE RÁPIDO
+1.  🔤 Tipos de Dados Básicos
+2.  📊 Variáveis e Escopos  
+3.  🏗️ Argumentos
+4.  📦 Arrays e Collections
+5.  🗂️ DataTables
+6.  🔧 Conversões e Manipulações
+7.  💡 Boas Práticas
+
+## 1. 🔤 TIPOS DE DADOS BÁSICOS
+### ==========================
+
+String (Texto)
+---------------
+💡 Uso: Nomes, emails, textos, caminhos de arquivo
+📝 Exemplos:
+    strNome = "João Silva"
+    strEmail = "joao@empresa.com"
+    strCaminhoArquivo = "C:\Documents\arquivo.xlsx"
+
+Integer (Inteiro)
+------------------
+💡 Uso: Contadores, idades, quantidades
+📝 Exemplos:
+    iIdade = 30
+    iQuantidadeProdutos = 150
+    iTentativasLogin = 0
+
+Boolean (Verdadeiro/Falso)
+---------------------------
+💡 Uso: Flags, condições, estados
+📝 Exemplos:
+    bProcessoConcluido = True
+    bUsuarioLogado = False
+    bArquivoExiste = True
+
+Double (Decimal)
+-----------------
+💡 Uso: Valores monetários, medidas, porcentagens
+📝 Exemplos:
+    decPreco = 29.90
+    decAltura = 1.75
+    decDesconto = 0.15
+
+DateTime (Data/Hora)
+---------------------
+💡 Uso: Datas, horários, timestamps
+📝 Exemplos:
+    dttDataNascimento = New DateTime(1990, 5, 15)
+    dttHoraAtual = DateTime.Now
+    dttVencimento = DateTime.Today.AddDays(30)
+
+## 2. 📊 VARIÁVEIS E ESCOPOS
+### =========================
+
+🔹 Convenção de Nomenclatura (camelCase + prefixo)
+---------------------------------------------------
+strClienteNome      ' String
+iIdadeCliente       ' Integer  
+bClienteAtivo       ' Boolean
+decSalario          ' Double
+dttDataCadastro     ' DateTime
+arrProdutos         ' Array
+lstEmails           ' List
+dtClientes          ' DataTable
+
+🔹 Escopos de Variáveis
+------------------------
+Sequence Scope      ' Visível apenas na sequence atual
+Workflow Scope      ' Visível em todo workflow
+Global Scope        ' Visível em todo projeto
+
+## 3. 🏗️ ARGUMENTS
+### ===============
+
+🔹 Direção dos Argumentos
+--------------------------
+In                  ' Entrada (Input)
+Out                 ' Saída (Output)  
+In/Out              ' Entrada e Saída
+Property            ' Propriedade do workflow
+
+🔹 Exemplos Práticos
+---------------------
+' Argumento IN (entrada)
+strNomeArquivo (In) = "dados.xlsx"
+
+' Argumento OUT (saída)  
+bProcessoSucesso (Out) = True
+
+' Argumento IN/OUT
+iRegistrosProcessados (In/Out) = 0
+
+## 4. 📦 ARRAYS E COLLECTIONS
+### ==========================
+
+🔹 Arrays
+----------
+' Declaração e inicialização
+arrNomes = New String() {"João", "Maria", "Carlos"}
+arrIdades = New Integer() {25, 30, 35}
+arrPrecos = New Double() {10.50, 25.75, 99.99}
+
+' Acesso a elementos
+strPrimeiroNome = arrNomes(0)        ' João
+iUltimaIdade = arrIdades(arrIdades.Length - 1)
+
+🔹 Lists (Mais flexíveis que Arrays)
+-------------------------------------
+' Declaração
+lstClientes = New List(Of String)
+lstProdutos = New List(Of Integer)
+
+' Operações comuns
+lstClientes.Add("Novo Cliente")
+lstClientes.Remove("Cliente Antigo")
+lstClientes.Contains("João")
+lstClientes.Clear()
+
+🔹 Dictionaries (Chave-Valor)
+------------------------------
+' Declaração
+dictConfig = New Dictionary(Of String, Object)
+dictUsuarios = New Dictionary(Of String, String)
+
+' Uso prático
+dictConfig.Add("ServidorSMTP", "smtp.empresa.com")
+dictConfig.Add("Porta", 587)
+dictConfig.Add("UsarSSL", True)
+
+strServidor = dictConfig("ServidorSMTP")
+
+## 5. 🗂️ DATATABLES
+### ================
+
+🔹 Criação de DataTable
+------------------------
+' Método 1: Criar manualmente
+dtClientes = New DataTable
+dtClientes.Columns.Add("ID", GetType(Integer))
+dtClientes.Columns.Add("Nome", GetType(String))  
+dtClientes.Columns.Add("Idade", GetType(Integer))
+dtClientes.Columns.Add("Ativo", GetType(Boolean))
+
+' Método 2: Via atividade "Build Data Table"
+
+🔹 Operações com DataTable
+---------------------------
+' Adicionar linha
+Dim novaLinha As DataRow = dtClientes.NewRow()
+novaLinha("ID") = 1
+novaLinha("Nome") = "João Silva" 
+novaLinha("Idade") = 30
+novaLinha("Ativo") = True
+dtClientes.Rows.Add(novaLinha)
+
+' Filtrar dados
+Dim linhasFiltradas As DataRow() = dtClientes.Select("Idade > 25 AND Ativo = true")
+
+' Contar registros
+iTotalClientes = dtClientes.Rows.Count
+
+## 6. 🔧 CONVERSÕES E MANIPULAÇÕES
+### ===============================
+
+🔹 Conversões de Tipo
+----------------------
+' String para Number
+iIdade = Convert.ToInt32("25")
+decPreco = Convert.ToDouble("29.90")
+
+' Number para String  
+strIdade = iIdade.ToString()
+strPreco = decPreco.ToString("C")  ' Formato moeda: R$ 29,90
+
+' Data para String
+strData = dttDataNascimento.ToString("dd/MM/yyyy")
+strDataHora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
+
+🔹 Manipulação de Strings
+--------------------------
+' Concatenação
+strNomeCompleto = strPrimeiroNome + " " + strSobrenome
+
+' Formatação
+strMensagem = String.Format("Olá {0}, você tem {1} anos.", strNome, iIdade)
+
+' Busca e substituição
+bContemPalavra = strTexto.Contains("urgente")
+strNovoTexto = strTexto.Replace("velho", "novo")
+
+' Divisão e junção
+arrPalavras = strFrase.Split(" "c)
+strNovaFrase = String.Join(", ", arrPalavras)
+
+## 7. 💡 BOAS PRÁTICAS
+### ===================
+
+🔹 Nomenclatura
+----------------
+✅ CORRETO:
+   strClienteNome, iQuantidade, bProcessoAtivo, dtResultados
+
+❌ EVITAR:
+   nome, qtd, ativo, tabela
+
+🔹 Escopo Adequado
+-------------------
+' Use Sequence scope para variáveis temporárias
+' Use Workflow scope para dados compartilhados
+' Use Arguments para comunicação entre workflows
+
+🔹 Inicialização
+-----------------
+' Sempre inicialize variáveis
+strNome = String.Empty
+iContador = 0
+bStatus = False
+arrDados = New String() {}
+
+🔹 Documentação
+----------------
+' Comente variáveis complexas
+' Documente o propósito de cada argumento
+' Mantenha nomes auto-explicativos
+
+## 🎯 EXEMPLOS PRÁTICOS COMPLETOS
+### ==============================
+
+🔹 Cenário: Processamento de Pedidos
+-------------------------------------
+' Variáveis
+strNumeroPedido = "PED-2024-001"
+decValorTotal = 0.0
+iQuantidadeItens = 0
+bPedidoPrioritario = True
+dttDataPedido = DateTime.Now
+
+' Array de produtos
+arrProdutos = New String() {"Notebook", "Mouse", "Teclado"}
+arrPrecos = New Double() {2500.00, 89.90, 150.00}
+
+' Lista para resultados
+lstItensProcessados = New List(Of String)
+
+' DataTable para relatório
+dtRelatorio = New DataTable
+dtRelatorio.Columns.Add("Produto", GetType(String))
+dtRelatorio.Columns.Add("Quantidade", GetType(Integer))
+dtRelatorio.Columns.Add("Preco", GetType(Double))
+
+🔹 Cenário: Autenticação de Usuário
+------------------------------------
+' Arguments do workflow
+strEmail (In) = "usuario@empresa.com"
+strSenha (In) = "******"
+bAutenticado (Out) = False
+dictUsuario (Out) = New Dictionary(Of String, Object)
+
+' Variáveis internas
+strHashSenha = String.Empty
+iTentativas = 0
+bBloqueado = False
+
+## 📝 RESUMO FINAL
+### ===============
+
+✅ Use prefixos para identificar tipos (str, i, b, dec, dt, arr, lst)
+✅ Escolha o escopo apropriado para cada variável
+✅ Use Arguments para comunicação entre workflows  
+✅ Prefira Lists sobre Arrays para flexibilidade
+✅ Sempre inicialize variáveis antes do uso
+✅ Documente variáveis complexas com comentários
+
+🎉 DOMINE ESSES CONCEITOS E SEU RPA SERÁ PROFISSIONAL E MANUTENÍVEL!

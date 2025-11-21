@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Ui Path Rraeet",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "Y19MkIOCjUasaE4--f_f3Q",
+  "Reference": "mhU9lgpNbE2PpEDAEPL1jA/Y19MkIOCjUasaE4--f_f3Q",
+  "ParentRef": "mhU9lgpNbE2PpEDAEPL1jA/liF-9qM7kUeI2vEh8kXSUg",
+  "Created": "2025-11-13T20:34:40.0983428Z",
+  "Updated": "2025-11-13T20:34:40.0983428Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

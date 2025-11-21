@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CWeK1CV2l0aZcYYrYF9QvA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="academy.uipath.com/learning-plans/rpa-developer-foundation---portuguese" CVScreenId="4027fb02-c932-49d9-bea7-40c43132c268" CvTextArea="112, 341, 134, 21" CvTextArgument="Ui Path Rraeet&quot;" CvType="Text" DesignTimeRectangle="112, 341, 134, 21" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="38aa5e5c-b2bb-4416-ab39-1942aa7cb55d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Developer Foundation - Portuguese Course | UiPath Academy' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6f896d8a41f9e426bb38c2fa008467bd.png" xmlns="">002xiinMEY0-d-i1_pHpeWA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

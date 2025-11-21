@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IelrMKyN0UCNjbPVToPwdQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="academy.uipath.com/learning-plans/rpa-developer-foundation---portuguese" CVScreenId="c11efa2c-ea49-4e72-83e0-9e8163359acd" CvTextArea="854, 252, 203, 20" CvTextArgument="Learning plan structure" CvType="Text" DesignTimeRectangle="855, 250, 203, 25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Learning plan structure' tag='AP-TYPOGRAPHY' /&gt;" Guid="bc333d89-ae45-43b8-92c0-adcffcb7a02b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Developer Foundation - Portuguese Course | UiPath Academy' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f80ea8a6be7a8f7c1cbdcc9d569be4f6.png" xmlns="">0mxBdst6LjE6HVZFEDvrWMw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

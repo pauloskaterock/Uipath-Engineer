@@ -1,0 +1,6 @@
+{
+  "Name": "Build Your First Robo",
+  "ProjectType": "Process",
+  "Description": "           Verificar se há novas faturas na pasta da caixa de entrada do email do Outlook.\r\n\r\n           Salvar as faturas.\r\n\r\n           Encontrar e salvar o código do cliente de cada fatura.\r\n\r\n           Acessar o site do \"ACME System 1\".\r\n\r\n           Recuperar o valor do desconto para cada código de cliente.\r\n\r\n           Preencher o valor do desconto no respectivo campo da fatura.\r\n\r\n           Preparar um rascunho de email no Outlook com os arquivos de fatura atualizados.",
+  "MainFile": "Main.xaml"
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Learning plan structure",
+  "Type": "Element",
+  "Id": "dAzho1zW_k-2Q47PFR8SeA",
+  "Reference": "mhU9lgpNbE2PpEDAEPL1jA/dAzho1zW_k-2Q47PFR8SeA",
+  "ParentRef": "mhU9lgpNbE2PpEDAEPL1jA/liF-9qM7kUeI2vEh8kXSUg",
+  "Created": "2025-11-13T20:33:32.9713795Z",
+  "Updated": "2025-11-13T20:33:32.9713795Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

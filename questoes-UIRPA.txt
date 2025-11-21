@@ -1,0 +1,221 @@
+✅ Pergunta 1
+Quais desses produtos da UiPath permitem que você colabore com sua equipe e automatize o trabalho por meio de interface do usuário e API, com inteligência artificial nativa integrada? Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas:
+
+Assistente
+
+Robôs
+
+❌ Não aplicáveis:
+
+Família do Estúdio
+
+Aplicativos
+
+Serviço de integração
+
+Orquestrador
+
+✅ Pergunta 2
+Qual das seguintes opções NÃO é uma funcionalidade do Orchestrator? Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas (NÃO são funcionalidades):
+
+Automação predial
+
+Executando automações em modo assistido
+
+❌ Funcionalidades do Orchestrator:
+
+Gerenciamento de licenças com e sem acompanhamento
+
+Armazenar credenciais
+
+Conectando-se a robôs não tripulados
+
+✅ Pergunta 3
+Os usuários precisam primeiro ser adicionados ao Automation Cloud para receberem qualquer tipo de licença? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Sim
+
+✅ Pergunta 4
+Qual das seguintes ações pode ser facilmente executada por usuários do Studio que estejam conectados ao Orchestrator? Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas:
+
+Publicar um pacote no Orchestrator
+
+Execute tarefas usando processos publicados
+
+❌ Não aplicáveis:
+
+Execute tarefas no Automation Cloud
+
+Execute um processo em modo de depuração
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+✅ Pergunta 1
+Quais desses produtos da UiPath permitem que você colabore com sua equipe e automatize o trabalho por meio de interface do usuário e API, com inteligência artificial nativa integrada? Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas:
+
+Assistente
+
+Robôs
+
+❌ Não aplicáveis:
+
+Família do Estúdio
+
+Aplicativos
+
+Serviço de integração
+
+Orquestrador
+
+✅ Pergunta 2
+Qual das seguintes opções NÃO é uma funcionalidade do Orchestrator? Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas (NÃO são funcionalidades):
+
+Automação predial
+
+Executando automações em modo assistido
+
+❌ Funcionalidades do Orchestrator:
+
+Gerenciamento de licenças com e sem acompanhamento
+
+Armazenar credenciais
+
+Conectando-se a robôs não tripulados
+
+✅ Pergunta 3
+Os usuários precisam primeiro ser adicionados ao Automation Cloud para receberem qualquer tipo de licença? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Sim
+
+✅ Pergunta 4
+Qual das seguintes ações pode ser facilmente executada por usuários do Studio que estejam conectados ao Orchestrator? Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas:
+
+Publicar um pacote no Orchestrator
+
+Execute tarefas usando processos publicados
+
+❌ Não aplicáveis:
+
+Execute tarefas no Automation Cloud
+
+Execute um processo em modo de depuração
+
+✅ Pergunta 5
+Boas práticas ao automatizar um projeto: Selecione todas as respostas aplicáveis.
+
+✔️ Respostas corretas:
+
+Usar nomes significativos para arquivos de workflow, atividades, argumentos e variáveis
+
+Escolher o layout apropriado (fluxogramas, sequências, máquinas de estado)
+
+Usar sistema de controle de versão
+
+Deletar arquivos de saída no início do processo
+
+Usar convenção Upper Camel Case para nomear workflows
+
+✅ Pergunta 6
+Como podemos pausar propositalmente o processo de depuração em uma atividade que pode gerar problemas de execução? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Clicando com o botão direito na atividade e selecionando Toggle Breakpoint
+
+✅ Pergunta 7
+Como publicar no 'Orchestrator Personal Workspace Feed'? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Primeiro habilitando a opção no Orchestrator e depois selecionando 'Orchestrator Personal Workspace Feed' ao publicar no Studio
+
+✅ Pergunta 8
+Qual atividade do Studio usamos para repetir ações em cada arquivo de uma pasta? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+For each file in folder
+
+✅ Pergunta 9
+Como abrir a localização do projeto na máquina usando o Studio? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Clicando no painel Project e selecionando File Explorer
+
+✅ Pergunta 10
+Quando devemos usar a atividade 'If' em um workflow no Studio? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Quando queremos que o processo siga um de dois caminhos diferentes, dependendo de uma condição
+
+✅ Pergunta 11
+Como adicionar uma atividade ao workflow no Studio? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Clicando no painel Activities, selecionando ou pesquisando a atividade e arrastando para o workflow
+
+✅ Pergunta 12
+Como executar o projeto em modo de depuração no Studio? Escolha uma das respostas.
+
+✔️ Resposta correta:
+
+Clicando na aba Debug, depois em Debug File e selecionando Run File
+
+✅ Pergunta 13
+Associe os painéis do Studio às suas descrições corretas:
+
+Painel	Descrição
+Designer panel	Gerenciar atividades no workflow atual
+Output panel	Ver mensagens de log, status de execução, erros e avisos
+Activities panel	Ver e adicionar atividades disponíveis à automação
+Project panel	Gerenciar arquivos do projeto, dependências e configurações
+Data Manager Panel	Gerenciar diferentes tipos de dados no projeto de automação
+Properties panel	Ver e configurar propriedades da atividade selecionada
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+

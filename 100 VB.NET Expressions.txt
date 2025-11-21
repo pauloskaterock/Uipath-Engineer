@@ -1,0 +1,295 @@
+🎯 Professor: 100 VB.NET Expressions Mais Usadas no UiPath 📚
+Aqui está a lista COMPLETA das expressões VB.NET mais utilizadas no UiPath para você estudar e consultar!
+
+📊 1. MANIPULAÇÃO DE STRING (25 expressões)
+vbnet
+' 🔤 CONVERSÕES E FORMATAÇÃO
+texto.ToString()
+Convert.ToInt32(texto)
+Convert.ToDouble(texto)
+Convert.ToDateTime(texto)
+String.Format("Olá {0}", nome)
+texto.ToUpper()
+texto.ToLower()
+texto.Trim()
+
+' 🔍 BUSCA EM STRING
+texto.Contains("palavra")
+texto.StartsWith("inicio") 
+texto.EndsWith("fim")
+texto.IndexOf("busca")
+texto.Substring(inicio, tamanho)
+texto.Replace("velho", "novo")
+
+' 📏 INFORMAÇÕES DE STRING
+texto.Length
+String.IsNullOrEmpty(texto)
+String.IsNullOrWhiteSpace(texto)
+texto.Split(","c)
+String.Join(",", array)
+
+' 🎯 FORMATAÇÃO
+texto.PadLeft(10, "0"c)
+texto.PadRight(10)
+texto.Remove(2, 3)
+texto.Insert(2, "inserir")
+DateTime.Now.ToString("dd/MM/yyyy")
+🔢 2. OPERAÇÕES NUMÉRICAS (15 expressões)
+vbnet
+' ➕ OPERAÇÕES BÁSICAS
+numero1 + numero2
+numero1 - numero2  
+numero1 * numero2
+numero1 / numero2
+Math.Round(valor, 2)
+Math.Floor(valor)
+Math.Ceiling(valor)
+
+' 📊 FUNÇÕES MATEMÁTICAS
+Math.Max(num1, num2)
+Math.Min(num1, num2)
+Math.Abs(valor)
+Math.Pow(base, expoente)
+Math.Sqrt(valor)
+
+' 🔄 CONVERSÕES NUMÉRICAS
+CInt(texto)          ' Para Integer
+CDbl(texto)          ' Para Double  
+CDec(texto)          ' Para Decimal
+📅 3. DATA E HORA (20 expressões)
+vbnet
+' ⏰ DATA ATUAL
+DateTime.Now
+DateTime.Today
+DateTime.Now.ToString("HH:mm:ss")
+DateTime.Now.ToString("dd/MM/yyyy")
+
+' 📅 MANIPULAÇÃO DE DATAS
+data.AddDays(1)
+data.AddMonths(1)
+data.AddYears(1)
+data.AddHours(2)
+data.AddMinutes(30)
+
+' 🔍 COMPARAÇÃO DE DATAS
+data1 < data2
+data1 >
+
+
+
+
+
+
+📊 1. FILTROS EM DATATABLE (LINQ + SELECT)
+🔍 FILTROS BÁSICOS:
+vbnet
+' 📌 Filtrar por valor exato
+dt.Select("Nome = 'João'")
+
+' 📌 Filtrar com múltiplas condições
+dt.Select("Idade > 18 AND Cidade = 'São Paulo'")
+
+' 📌 Filtrar com OR
+dt.Select("Departamento = 'Vendas' OR Departamento = 'Marketing'")
+
+' 📌 Filtrar datas
+dt.Select("DataNascimento > #01/01/2000#")
+
+' 📌 Filtrar texto que contém
+dt.Select("Nome LIKE '%Silva%'")
+
+' 📌 Filtrar texto que começa com
+dt.Select("Nome LIKE 'A%'")
+
+' 📌 Filtrar valores nulos
+dt.Select("Email IS NULL")
+dt.Select("Email IS NOT NULL")
+📈 FILTROS AVANÇADOS:
+vbnet
+' 🎯 Filtrar com IN
+dt.Select("Cidade IN ('São Paulo', 'Rio de Janeiro', 'Belo Horizonte')")
+
+' 🎯 Filtrar com BETWEEN
+dt.Select("Idade BETWEEN 18 AND 65")
+
+' 🎯 Filtrar com NOT
+dt.Select("NOT Departamento = 'RH'")
+
+' 🎯 Filtrar com ordem
+dt.Select("Ativo = true", "Nome ASC")
+
+' 🎯 Combinar filtros complexos
+dt.Select("(Idade > 30 AND Salario > 5000) OR (Departamento = 'TI' AND Ativo = true)")
+🔧 2. LINQ (LANGUAGE INTEGRATED QUERY)
+📦 FILTROS LINQ COM WHERE:
+vbnet
+' 🔍 Filtrar lista/array
+lista.Where(Function(x) x > 10)
+array.Where(Function(item) item.Contains("teste"))
+
+' 🔍 Filtrar DataTable rows
+dt.AsEnumerable().Where(Function(row) row("Idade") > 18)
+dt.AsEnumerable().Where(Function(row) Convert.ToInt32(row("Salario")) > 5000)
+
+' 🔍 Filtrar com múltiplas condições
+dt.AsEnumerable().Where(Function(row) 
+    Convert.ToInt32(row("Idade")) > 18 And 
+    row("Cidade").ToString() = "São Paulo"
+End Function)
+
+' 🔍 Filtrar datas
+dt.AsEnumerable().Where(Function(row) 
+    Convert.ToDateTime(row("DataCadastro")) > DateTime.Today.AddDays(-30)
+End Function)
+🎯 PROJEÇÕES COM SELECT:
+vbnet
+' 📌 Selecionar colunas específicas
+dt.AsEnumerable().Select(Function(row) row("Nome").ToString())
+
+' 📌 Criar novos objetos
+dt.AsEnumerable().Select(Function(row) New With {
+    .Nome = row("Nome"),
+    .Idade = Convert.ToInt32(row("Idade"))
+})
+
+' 📌 Transformar dados
+dt.AsEnumerable().Select(Function(row) 
+    row("Nome").ToString().ToUpper() + " - " + row("Cidade").ToString()
+End Function)
+🗂️ 3. FILTROS EM COLLECTIONS
+📋 LISTAS E ARRAYS:
+vbnet
+' 🔍 Filtrar lista de strings
+listaNomes.Where(Function(nome) nome.StartsWith("A"))
+listaEmails.Where(Function(email) email.Contains("@gmail.com"))
+
+' 🔍 Filtrar lista de objetos
+listaClientes.Where(Function(cliente) cliente.Idade > 30)
+listaProdutos.Where(Function(produto) produto.Preco > 100 And produto.Estoque > 0)
+
+' 🔍 Filtrar com OR em lista
+lista.Where(Function(x) x = "valor1" Or x = "valor2")
+
+' 🔍 Filtrar excluindo valores
+lista.Where(Function(x) Not x = "excluir")
+📅 4. FILTROS COM DATAS
+⏰ EXPRESSÕES TEMPORAIS:
+vbnet
+' 📅 Filtrar últimos 7 dias
+dt.Select("Data >= #" + DateTime.Today.AddDays(-7).ToString("MM/dd/yyyy") + "#")
+
+' 📅 Filtrar mês atual
+dt.Select("MONTH(Data) = " + DateTime.Now.Month.ToString() + " AND YEAR(Data) = " + DateTime.Now.Year.ToString())
+
+' 📅 Filtrar por período
+dt.Select("Data BETWEEN #01/01/2024# AND #31/12/2024#")
+
+' 📅 Filtrar por dia da semana
+dt.AsEnumerable().Where(Function(row) 
+    Convert.ToDateTime(row("Data")).DayOfWeek = DayOfWeek.Monday
+End Function)
+
+' 📅 Filtrar horários
+dt.Select("HORA(DataHora) >= 8 AND HORA(DataHora) <= 18")
+🔍 5. FILTROS DE TEXTO AVANÇADOS
+📝 EXPRESSÕES REGEX:
+vbnet
+' 🎯 Validar email
+System.Text.RegularExpressions.Regex.IsMatch(texto, "^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+' 🎯 Validar CPF/CNPJ
+System.Text.RegularExpressions.Regex.IsMatch(texto, "^\d{3}\.\d{3}\.\d{3}-\d{2}$")
+
+' 🎯 Extrair números
+System.Text.RegularExpressions.Regex.Match(texto, "\d+").Value
+
+' 🎯 Extrair emails de texto
+System.Text.RegularExpressions.Regex.Matches(texto, "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b")
+
+' 🎯 Validar telefone
+System.Text.RegularExpressions.Regex.IsMatch(texto, "^\(\d{2}\)\s?\d{4,5}-\d{4}$")
+📊 6. AGREGAÇÕES E ESTATÍSTICAS
+📈 CÁLCULOS EM DATATABLE:
+vbnet
+' 🧮 Soma
+dt.Compute("SUM(Valor)", "Ativo = true")
+
+' 📊 Média
+dt.Compute("AVG(Idade)", "Cidade = 'São Paulo'")
+
+' 🔢 Contagem
+dt.Compute("COUNT(ID)", "DataCadastro > #01/01/2024#")
+
+' 📉 Máximo e Mínimo
+dt.Compute("MAX(Salario)", "")
+dt.Compute("MIN(Idade)", "Ativo = true")
+
+' 📋 Contagem distinta
+dt.AsEnumerable().Select(Function(row) row("Cidade").ToString()).Distinct().Count()
+🎯 7. EXPRESSÕES ÚTEIS PARA IF CONDITIONS
+✅ CONDIÇÕES DE VALIDAÇÃO:
+vbnet
+' 🔍 Verificar se DataTable tem dados
+dt.Rows.Count > 0
+dt.Select("Ativo = true").Length > 0
+
+' 🔍 Verificar se lista tem itens
+lista.Any()
+lista.Where(Function(x) x > 10).Any()
+
+' 🔍 Verificar se texto é válido
+Not String.IsNullOrEmpty(texto)
+Not String.IsNullOrWhiteSpace(texto)
+texto.Length >= 5
+
+' 🔍 Verificar se número está em range
+valor >= 0 And valor <= 100
+Enumerable.Range(1, 10).Contains(valor)
+
+' 🔍 Verificar se data é válida
+data >= DateTime.Today.AddYears(-100) And data <= DateTime.Today
+🔄 8. EXPRESSÕES PARA FOR EACH
+🔄 FILTROS EM LOOPS:
+vbnet
+' 📌 Filtrar antes do loop
+For Each row In dt.Select("Ativo = true")
+    ' Processar apenas registros ativos
+Next
+
+' 📌 Usar LINQ no loop
+For Each item In lista.Where(Function(x) x.Preco > 100)
+    ' Processar itens caros
+Next
+
+' 📌 Combinar com ordenação
+For Each row In dt.Select("", "Nome ASC, Idade DESC")
+    ' Processar ordenado
+Next
+💡 9. EXEMPLOS PRÁTICOS REAIS
+📧 PARA PROCESSAMENTO DE EMAIL:
+vbnet
+' Filtrar emails não lidos
+emails.Where(Function(email) Not email.IsRead)
+
+' Filtrar emails com anexos
+emails.Where(Function(email) email.Attachments.Count > 0)
+
+' Filtrar emails de remetente específico
+emails.Where(Function(email) email.From.Contains("contato@"))
+📄 PARA PROCESSAMENTO DE ARQUIVOS:
+vbnet
+' Filtrar arquivos por extensão
+arquivos.Where(Function(arq) arq.Extension = ".xlsx")
+
+' Filtrar arquivos por tamanho
+arquivos.Where(Function(arq) arq.Length > 1024) ' > 1KB
+
+' Filtrar arquivos por data
+arquivos.Where(Function(arq) arq.LastWriteTime > DateTime.Today.AddDays(-7))
+🚀 10. DICAS DE PERFORMANCE
+⚡ OTIMIZAÇÕES:
+vbnet
+' ✅ Use dt.Select() para filtros simples - mais rápido
+' ✅ Use LINQ para filtros complexos - mais flexível
+' ✅ Pre-compile expressões regex se usar repetidamente
+' ✅ Use AsEnumerable() apenas quando necessário
