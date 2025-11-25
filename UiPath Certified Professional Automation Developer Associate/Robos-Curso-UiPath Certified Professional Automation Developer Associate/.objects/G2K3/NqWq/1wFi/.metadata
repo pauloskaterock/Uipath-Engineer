@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Convert.ToInt32 Method (System)  Micro",
+  "Type": "Screen",
+  "Id": "1wFiBaqgekmKsCwKE1cNRA",
+  "Reference": "Xlq5dJ8dQE-ByNdNjFljDQ/1wFiBaqgekmKsCwKE1cNRA",
+  "ParentRef": "Xlq5dJ8dQE-ByNdNjFljDQ/NqWqzCoeEkOt7ti_EW8pag",
+  "Created": "2025-11-21T18:48:22.6664953Z",
+  "Updated": "2025-11-21T18:48:22.6664953Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.20.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -219,3 +219,226 @@ Properties panel	Ver e configurar propriedades da atividade selecionada
 --------------------------------------------------------------------------------------------------------------------------
 
 
+✅ Pergunta 14
+Qual dos seguintes métodos converte um valor especificado em um número inteiro? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+CInt(expressão)
+
+❌ Outras opções:
+
+ToString(expressão)
+
+Analisar(expressão)
+
+ParaBoolean(expressão)
+
+✅ Pergunta 15
+Qual é o atalho de teclado para criar um argumento de direção IN? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Ctrl + M
+
+❌ Outras opções:
+
+Ctrl + K
+
+Ctrl + Shift + M
+
+Alt + M
+
+
+----------------------------------------------------------------------------------------------------
+
+
+✅ Pergunta 16
+Qual atividade permite interromper o ciclo em um ponto escolhido e continuar com a próxima atividade? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Quebrar (Break)
+
+❌ Outras opções:
+
+Continuar
+
+Atraso
+
+Decisão de fluxo
+
+✅ Pergunta 17
+Associe as atividades às suas descrições:
+
+Atividade	Descrição
+Enquanto	A condição é avaliada antes de cada execução das instruções
+Faça enquanto	A condição é avaliada após cada execução das instruções
+Se	O ramo Else contém as atividades a serem executadas se a condição for falsa
+Para cada	Executa uma ou mais atividades em cada elemento de uma coleção
+✅ Pergunta 18
+O que a atividade 'Assign' está fazendo neste exemplo?
+
+Variável: arrNumeros
+
+Valor atribuído: currentItem
+
+✔️ Interpretação correta: A atividade está atribuindo o valor de currentItem à variável arrNumeros, dentro de uma sequência de atividades.
+
+
+-------------------------------------------------------------------------------------------
+✅ Pergunta 19
+Qual é o número mínimo de casos necessários para uma atividade de troca? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Um
+
+❌ Outras opções:
+
+Dois
+
+Três
+
+Quatro
+
+✅ Pergunta 20
+Quais das seguintes opções seguem as melhores práticas para convenções de nomenclatura? Selecione as três opções que se aplicam.
+
+✔️ Respostas corretas:
+
+Número da transação
+
+out_Número_da_Fatura
+
+dt_LinhasExtraídas
+
+❌ Não recomendadas:
+
+LinhasExtraídasDt
+
+não encontrado
+
+✅ Pergunta 21
+Qual das seguintes atividades permite que seu projeto tome várias decisões diferentes, dependendo se uma das várias condições especificadas for atendida? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+Se (If)
+
+
+❌ Outras opções:
+
+Senão (Else)
+
+Para cada (For each)
+
+Trocar (Switch)
+
+✅ Pergunta 22
+Qual das seguintes atividades consiste em uma expressão condicional e uma coleção de casos, com um conjunto correspondente de atividades? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Trocar (Switch)
+
+❌ Outras opções:
+
+Para cada (For each)
+
+Faça enquanto (Do while)
+
+Se (If)
+
+✅ Pergunta 23
+Quais das três atividades a seguir permitem usar uma atividade de pausa para sair do corpo e continuar com a execução fora da atividade de fluxo de controle? Selecione as três opções que se aplicam.
+
+✔️ Respostas corretas:
+
+Para cada (For each)
+
+Enquanto (While)
+
+Faça enquanto (Do while)
+
+❌ Não aplicáveis:
+
+Se (If)
+
+Trocar (Switch)
+
+✅ Pergunta 24
+Qual layout você escolheria ao criar um processo com múltiplas ramificações de decisões? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Fluxograma
+
+❌ Outras opções:
+
+Sequência
+
+Máquina de estados
+
+✅ Pergunta 25
+Quantas vezes a sequência do corpo será executada se a expressão no campo de condição da atividade do while for contador > 0? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+10
+
+❌ Outras opções:
+
+1
+
+11
+
+9
+
+✅ Pergunta 26
+Qual das seguintes atividades possui uma propriedade maxIterations? Selecione as duas opções que se aplicam.
+
+✔️ Respostas corretas:
+
+Trocar (Swap)
+
+Para cada (For each)
+
+❌ Não aplicáveis:
+
+Atribuir (Assign)
+
+Se (If)
+
+Enquanto (While)
+
+✅ Pergunta 27
+Associe a atividade à sua descrição correta:
+
+Atividade	Descrição correta
+Enquanto	Verifica se a expressão é verdadeira e, em seguida, executa as atividades
+Faça enquanto	Executa as atividades e depois verifica a expressão
+Trocar	É mais vantajoso quando existem pelo menos três possíveis linhas de ação
+Para cada	Executa uma série de atividades para cada elemento de uma coleção
+✅ Pergunta 28
+Qual atividade pode ser usada para processar cada item de uma coleção individualmente? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Para cada (For each)
+
+❌ Outras opções:
+
+Se (If)
+
+Faça enquanto (Do while)
+
+Enquanto (While)
+
+✅ Pergunta 29
+Associe as propriedades de variáveis às suas definições corretas:
+
+Propriedade	Definição correta
+Nome	Define como a variável será identificada
+Tipo	Define que tipo de dados podem ser armazenados na variável
+Escopo	Define a parte do fluxo de trabalho onde a variável pode ser usada
+Valor padrão	Define o valor com o qual a variável é inicializada

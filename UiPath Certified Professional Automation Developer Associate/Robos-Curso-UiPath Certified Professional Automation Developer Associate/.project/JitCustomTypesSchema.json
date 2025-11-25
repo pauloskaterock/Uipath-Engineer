@@ -1,0 +1,39 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 1,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|uHqTvS9XAf9mEOreEaCgRabKY5EIg39vUnMvMOSC4o8",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Name",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Name Url",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Description",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Description Url",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|sOYuJPjZq425HJVCripiFJSXssc0bExi06mJ8yYHzg",
+        "assemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    }
+  ]
+}

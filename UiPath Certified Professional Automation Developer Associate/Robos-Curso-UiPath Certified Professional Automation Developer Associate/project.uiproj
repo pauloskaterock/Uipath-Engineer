@@ -1,0 +1,6 @@
+{
+  "Name": "VariaveisArgumentos no studio",
+  "ProjectType": "Process",
+  "Description": "Aprendizados\r\nAo final deste curso, você será capaz de:\r\nEntender o que são variáveis e a finalidade delas.\r\nCriar e configurar variáveis em um projeto de automação.\r\nListar os tipos de dados e aplicar os métodos de conversão.\r\nEntender o que são argumentos e a finalidade deles.\r\nUsar a atividade \"Invoke Workflow File\" para vincular a execução do fluxo de trabalho e transmitir dados por meio de argumentos.\r\nDiferenciar variáveis de argumentos.\r\nEntender o que são arrays e a finalidade delas.",
+  "MainFile": "Main.xaml"
+}
