@@ -3,16 +3,11 @@
 Resumo curto
 Um repositório para estudo, prática e demonstração de soluções RPA com UiPath, integrando boas práticas de engenharia de software para automações robustas, testáveis e escaláveis.
 
-Badges
-
-- status da build | cobertura | licença (adicionar badges do CI e cobertura)
-
 Sumário
 
 - Sobre
 - Objetivos
 - Tecnologias
-- Estrutura do repositório
 - Como começar
 - Boas práticas adotadas
 - Exemplos de projetos
@@ -28,7 +23,7 @@ Objetivos
 
 - Demonstrar projetos end-to-end com UiPath (REFramework).
 - Reforçar padrões de automação corporativa.
-- Preparar para certificações UiPath (ADAv2, ADPv2) e fundamentos AWS.
+- Preparar para certificações UiPath e fundamentos AWS.
 - Mostrar integração entre RPA e desenvolvimento tradicional (APIs, webhooks, logs).
 
 Tecnologias
@@ -43,18 +38,6 @@ Tecnologias
 - Linux (Ubuntu / WSL)
 - AWS e UiPath Automation Cloud
 
-Estrutura do repositório (exemplo)
-
-- /projects
-  - /project-name
-    - /src (workflows UiPath)
-    - /docs (README do projeto, requisitos, runbook)
-    - /tests (scripts e fixtures)
-- /exercises (prática para certificação)
-- /integrations (APIs e exemplos de consumo)
-- /scripts (helpers, deploy, checklists)
-- /docs (padrões, arquitetura, playbooks)
-
 Como começar
 Pré-requisitos
 
@@ -66,7 +49,7 @@ Pré-requisitos
 Instalação rápida
 
 1. Clonar repositório:
-   git clone <URL>
+   git clone
 2. Abrir o projeto UiPath no UiPath Studio ou seguir README específico do subprojeto.
 3. Configurar credenciais no Orchestrator ou variáveis de ambiente conforme docs do projeto.
 
@@ -94,21 +77,17 @@ Projetos e exemplos
 Testes e CI
 
 - Testes unitários para scripts e serviços auxiliares.
-- Pipelines CI: build, lint e testes automatizados (configurar GitHub Actions/GitLab CI).
+- Pipelines CI: build, lint e testes automatizados
 - Validar pacotes e gerar artefatos para publicação.
 
 Contribuição
 
 - Abrir issues para discutir problemas ou novos casos de uso.
 - Fork → branch com prefixo feature/bugfix → PR com descrição e checklist.
-- Seguir guidelines de commit e código (conforme CONTRIBUTING.md quando disponível).
-
-Licença
-
-- Arquivo LICENSE na raiz (adicionar licença apropriada, ex: MIT).
+- Seguir guidelines de commit e código.
 
 Contato
-Paulo Henrique — Engenheiro de Software & RPA
+Paulo Henrique — Engenheiro de Software
 
 - LinkedIn: (adicionar)
 - Email: (adicionar)
@@ -118,36 +97,7 @@ Este repositório é um laboratório profissional: os artefatos seguem orientaç
 
 Bem-vindo ao repositório UiPath Engineer, um espaço dedicado ao estudo, prática e construção de soluções em RPA (Robotic Process Automation) utilizando o ecossistema UiPath, aliado à minha experiência sólida em desenvolvimento de software.
 
-Este repositório documenta minha jornada profissional rumo à certificação avançada em RPA, demonstra padrões de automação utilizados na indústria e integra conceitos de desenvolvimento moderno para criar automações mais elegantes, seguras e escaláveis.
-
-🚀 Sobre mim
-
-Sou Paulo Henrique, Engenheiro de Software e RPA Engineer, com experiência prática em:
-
-Desenvolvimento de aplicações Ruby on Rails (Full Stack)
-
-Desenvolvimento e suporte de automações RPA com UiPath
-
-Arquitetura e integração entre sistemas
-
-Construção de APIs, integrações REST e processamento de dados
-
-Pipeline de testes, TDD/BDD e automações complexas
-
-Desenvolvimento de projetos reais unificando software + automação robótica
-
-Atualmente estou revisando e reforçando conceitos do:
-
-UiPath Certified Professional – Automation Developer Associate (ADAv2)
-Revisitando fluxos, práticas recomendadas, REFramework, Orchestrator e integrações avançadas para garantir excelente performance no exame oficial.
-
-🎯 Próximo objetivo
-
-UiPath Automation Developer Professional (ADPv2)
-
-Certificações AWS: Cloud Practitioner Essentials
-
-Estruturas de certificação da UiPath Community (gratuitas e sugeridas pela plataforma)
+Este repositório documenta minha jornada profissional, demonstra padrões de automação utilizados na indústria e integra conceitos de desenvolvimento moderno para criar automações mais elegantes, seguras e escaláveis.
 
 🤖 Foco do Repositório
 
