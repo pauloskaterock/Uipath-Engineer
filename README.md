@@ -89,9 +89,6 @@ Contribuição
 Contato
 Paulo Henrique — Engenheiro de Software
 
-- LinkedIn: (adicionar)
-- Email: (adicionar)
-
 Notas finais
 Este repositório é um laboratório profissional: os artefatos seguem orientação para serem reproduzíveis e auditáveis. Verifique READMEs específicos de cada subprojeto para instruções detalhadas de execução e configuração.
 
