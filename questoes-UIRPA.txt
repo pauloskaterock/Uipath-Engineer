@@ -442,3 +442,140 @@ Nome	Define como a variável será identificada
 Tipo	Define que tipo de dados podem ser armazenados na variável
 Escopo	Define a parte do fluxo de trabalho onde a variável pode ser usada
 Valor padrão	Define o valor com o qual a variável é inicializada
+
+----------------------------------------------------------------------------------------------------------
+
+✅ Pergunta 31
+Qual das seguintes atividades pode ser usada para ler uma planilha inteira de um arquivo do Excel? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Intervalo de leitura (Read range)
+
+❌ Outras opções:
+
+Obtenha alcance (Get range)
+
+Célula de leitura (Read cell)
+
+Obter intervalo de tabelas (Get table range)
+
+✅ Pergunta 32
+Qual atividade permite criar uma tabela dinâmica a partir de uma fonte de dados na automação do Excel com o Studio? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Criar tabela dinâmica (Create pivot table)
+
+❌ Outras opções:
+
+Clique
+
+Inserir gráfico
+
+Digite em
+
+✅ Pergunta 33
+Escolha duas atividades que você pode usar se quiser adicionar dados a um documento .xlsx existente sem sobrescrever os dados existentes. Selecione as duas opções que se aplicam.
+
+✔️ Respostas corretas:
+
+Anexar intervalo no Excel
+
+Intervalo de acréscimos da planilha
+
+❌ Outras opções:
+
+Escrever célula no Excel
+
+Caderno de Exercícios - Intervalo de Escrita
+
+✅ Pergunta 34
+Qual atividade permite combinar dados de duas DataTables em uma única DataTable? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Mesclar tabela de dados (Merge data table)
+
+❌ Outras opções:
+
+Tabela de dados filtrados
+
+Para cada arquivo na pasta
+
+Leia o livro de exercícios Range
+
+✅ Pergunta 35
+Qual das seguintes atividades você usaria para ler dados de uma planilha do Excel com macros (.xlsm)? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Leia a atividade de alcance (Read range activity)
+
+❌ Outras opções:
+
+Leia a atividade da célula
+
+Atividade de leitura em CSV
+
+Leia a atividade do livro de exercícios Range
+
+✅ Pergunta 36
+Qual atividade do UiPath Studio garante que o corpo de um loop seja executado pelo menos uma vez? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Faça enquanto (Do While)
+
+❌ Outras opções:
+
+Se (If)
+
+Para cada (For Each)
+
+Enquanto (While)
+
+✅ Pergunta 37
+Que contêiner você precisa adicionar para poder usar as atividades modernas do Excel? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Utilizar arquivo do Excel
+
+❌ Outras opções:
+
+Usar Aplicativo/Navegador
+
+Não é necessário nenhum recipiente
+
+Escopo do aplicativo Excel
+
+✅ Pergunta 38
+Qual atividade você escolheria primeiro para percorrer todas as linhas de uma tabela de dados? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Para cada linha (For each row)
+
+❌ Outras opções:
+
+Para cada arquivo na pasta
+
+Para cada elemento da interface do usuário
+
+Para cada
+
+✅ Pergunta 39
+O que acontece se você usar uma atividade "Gravar Intervalo" e tentar gravar dados em um arquivo .xlsx que não existe? Escolha uma das opções abaixo.
+
+✔️ Resposta correta:
+
+Ele criará esse arquivo para você e gravará os dados nele
+
+❌ Outras opções:
+
+A execução continuará sem gravar os dados
+
+Isso irá gerar um erro
+
+Ele criará um novo arquivo em branco
